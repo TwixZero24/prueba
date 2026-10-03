@@ -1,0 +1,547 @@
+@keyframes ani-body {
+    0% {
+        --s-start-0: 37%;
+        --s-end-0: 90%;
+        --y-0: 96%;
+        --x-0: 11%;
+        --c-0: hsla(181, 79%, 51%, 1);
+        --s-start-1: 31%;
+        --s-end-1: 84%;
+        --c-1: hsla(258, 100%, 64%, 1);
+        --y-1: 89%;
+        --x-1: 92%;
+        --s-start-2: 41%;
+        --s-end-2: 61%;
+        --x-2: 58%;
+        --y-2: 7%;
+        --c-2: hsla(202, 95%, 54%, 1);
+        --x-3: 62%;
+        --c-3: hsla(225, 76%, 52%, 1);
+        --y-3: 35%;
+        --s-start-3: 22%;
+        --s-end-3: 59%;
+        --x-4: 2%;
+        --s-start-4: 19%;
+        --s-end-4: 70%;
+        --y-4: 63%;
+        --c-4: hsla(218, 81%, 92%, 1);
+    }
+
+    100% {
+        --s-start-0: 29%;
+        --s-end-0: 73%;
+        --y-0: 12%;
+        --x-0: 6%;
+        --c-0: hsla(299, 78%, 76%, 1);
+        --s-start-1: 8%;
+        --s-end-1: 80%;
+        --c-1: hsla(221, 87%, 56%, 1);
+        --y-1: 6%;
+        --x-1: 61%;
+        --s-start-2: 29%;
+        --s-end-2: 80%;
+        --x-2: 75%;
+        --y-2: 23%;
+        --c-2: hsla(206, 51%, 96%, 1);
+        --x-3: 76%;
+        --c-3: hsla(204, 76%, 75%, 1);
+        --y-3: 64%;
+        --s-start-3: 2%;
+        --s-end-3: 81%;
+        --x-4: 41%;
+        --s-start-4: 24%;
+        --s-end-4: 81%;
+        --y-4: 86%;
+        --c-4: hsla(301, 89%, 98%, 1);
+    }
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 37%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 90%
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 96%
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 11%
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(181, 79%, 51%, 1)
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 31%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 84%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(258, 100%, 64%, 1)
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 89%
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 92%
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 41%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 61%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 58%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 7%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(202, 95%, 54%, 1)
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 62%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(225, 76%, 52%, 1)
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 35%
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 22%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 2%
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 19%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 70%
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 63%
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(218, 81%, 92%, 1)
+}
+
+body {
+    --y-0: 96%;
+    --x-0: 11%;
+    --c-0: hsla(181, 79%, 51%, 1);
+    --c-1: hsla(258, 100%, 64%, 1);
+    --y-1: 89%;
+    --x-1: 92%;
+    --x-2: 58%;
+    --y-2: 7%;
+    --c-2: hsla(202, 95%, 54%, 1);
+    --x-3: 62%;
+    --c-3: hsla(225, 76%, 52%, 1);
+    --y-3: 35%;
+    --x-4: 2%;
+    --y-4: 63%;
+    --c-4: hsla(218, 81%, 92%, 1);
+    background-color: hsla(258, 82%, 70%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
+    animation: ani-body 10s linear infinite alternate;
+    background-blend-mode: normal, normal, normal, normal, normal;
+    will-change: transform, opacity;
+    contain: paint;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    --c-0: hsla(58, 93%, 49%, 1);
+    --x-0: 11.15092800972157%;
+    --y-0: 75.4770607757215%;
+    --c-1: hsla(212, 99%, 43%, 1);
+    --x-1: 46.4912299823044%;
+    --y-1: 74.94948465191737%;
+    --c-2: hsla(2, 100%, 47%, 0.99);
+    --x-2: 84.08325883678924%;
+    --y-2: 73.26946908596625%;
+    background-color: hsla(0, 0%, 0%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2));
+    animation: ani-body 10s linear infinite alternate;
+    background-blend-mode: normal, normal, normal;
+    will-change: transform, opacity;
+    contain: paint;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 5%;
+    font-size: 50px;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 5%;
+    font-size: 20px;
+
+}
+p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 10%;
+    flex-wrap: wrap;
+}
+
+nav a {
+    margin: 0 12px;
+}
+button {
+    background-color: #bc6db4a4;
+    border: none;
+    color: rgb(237, 234, 234);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px auto;
+    cursor: pointer;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color:rgb(81, 81, 174)
+}
+nav a{
+    display: block;
+    padding: 0px 10px;
+    color: white;
+    background-color: rgb(81, 81, 174);
+    border-radius: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@keyframes coloresNav{
+    0% {
+        background-color:hsla(258, 100%, 64%, 1);
+    }
+    50% {
+        background-color:hsla(202, 95%, 54%, 1);
+    }
+    100% {
+        background-color:hsla(218, 81%, 92%, 1);
+
+    }
+    }
+    nav {
+        margin-top: 0;
+        background-color: #101B3D;
+        animation:coloresNav 6s infinite alternate;
+    }
+    nav a {
+        background-color: #35105C;
+        color: white;
+        border: 2px solid white;
+    }
+    nav a:hover {
+        background-color:#D946EF;
+    }
+
+.encabezado {
+    padding: 34px 20px 10px;
+    text-align: center;
+}
+
+.encabezado p {
+    margin: 8px 0;
+}
+
+.encabezado .marca {
+    color: #101B3D;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main {
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+    padding: 20px 0 48px;
+}
+
+.bienvenida {
+  position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        #FCD116 0%,
+        #FCD116 50%,
+        #003893 50%,
+        #003893 75%,
+        #CE1126 75%,
+        #CE1126 100%
+    );
+}
+
+.bienvenida::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 65%
+    );
+    background-size: 250% 100%;
+    animation: brilloTarjeta 4s linear infinite;
+}
+
+.bienvenida h1,
+.bienvenida p,
+.bienvenida a {
+    position: relative;
+    z-index: 1;
+}
+
+
+.bienvenida h1 {
+    margin: 0 0 16px;
+    color: #101B3D;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.bienvenida p {
+    margin: 0 auto 28px;
+    max-width: 620px;
+}
+
+.boton-principal {
+    display: block;
+    padding: 14px 24px;
+    background-color: #e70000;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boton-principal:hover {
+    background-color: #D946EF;
+}
+
+.informacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.tarjeta {
+   position: relative;
+    overflow: hidden;
+    padding: 22px 18px;
+    background: linear-gradient(
+        to bottom,
+        #FCD116 0%,
+        #FCD116 50%,
+        #003893 50%,
+        #003893 75%,
+        #CE1126 75%,
+        #CE1126 100%
+    );
+    border: 2px solid white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 65%
+    );
+    background-size: 250% 100%;
+    animation: brilloTarjeta 4s linear infinite;
+}
+
+.tarjeta h2,
+.tarjeta p {
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+@keyframes brilloTarjeta {
+    from {
+        background-position: -150% 0;
+    }
+
+    to {
+        background-position: 150% 0;
+    }
+
+}
+
+.tarjeta h2 {
+    margin: 0 0 10px;
+    color: #94ad72;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 18px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+    nav {
+        gap: 8px;
+        padding: 10px 6px;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .encabezado {
+        padding: 24px 16px 8px;
+    }
+
+    .encabezado p {
+        font-size: 1rem;
+    }
+
+    main {
+        width: min(100% - 24px, 1000px);
+        padding-top: 12px;
+    }
+
+    .bienvenida {
+        padding: 30px 18px;
+    }
+
+    .bienvenida p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .boton-principal {
+        max-width: 100%;
+        padding: 13px 18px;
+    }
+
+    .informacion {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
