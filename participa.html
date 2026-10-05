@@ -1,24 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participa</title>
-    <link rel="stylesheet" href="style.participa.css">
-</head>
-<body>
-    <nav>
-        <a href="index.html#inicio">inicio</a>
-        <a href="reportar.html">reportar</a>
-        <a href="consulta.html">consulta</a>
-        <a href="participa.html">participa</a>
-    </nav>
-    <h1>participa</h1>
-    <h2>Mapa de Participación</h2>
-    <p>Aqui podras encontrar el mapa y participar en la comunidad para ayudar a resolver problemas o estar informado sobre las situaciones que se presentan</p>
+    <title>Participa - Mapa</title>
     
+    <!-- Estilos de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.participa.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        #map {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+        }
+        .cuadro-mapa {
+            width: 85%;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .botones-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .btn-pendiente {
+            padding: 10px 15px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .btn-resuelto {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
 
+<body>
 
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="reportar.html">Reportar</a>
+        <a href="consulta.html">Consulta</a>
+        <a href="participa.html">Participa</a>
+    </nav>
+
+    <h1>Participa</h1>
+    <h2>Mapa de Participación</h2>
+    <p>Selecciona un estado abajo y haz clic en cualquier parte del mapa para marcarlo.</p>
+<p>Aqui podras encontrar el mapa en el cual podras participar marcando los problemas que estan pendientes y solucionados</p>
+    <!-- Caja contenedora -->
+    <div class="cuadro-mapa">
+        <div id="map"></div>
+
+        <!-- Botones de control -->
+        <div class="botones-container">
+            <button type="button" class="btn-pendiente" onclick="seleccionarEstado('pendiente')">Marcar como Pendiente ⚠️</button>
+            <button type="button" class="btn-resuelto" onclick="seleccionarEstado('resuelto')">Marcar como Resuelto ✅</button>
+            
+            <p id="indicador-estado" style="margin-top: 12px; font-weight: bold; color: #555;">Estado seleccionado: <span style="color: red; font-weight: bold;">Ninguno (Selecciona uno arriba)</span></p>
+        </div>
+    </div>
+
+    <!-- Librería JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // 1. Inicializar el mapa en Cali
+        var map = L.map('map').setView([3.4516, -76.5320], 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Variable global para el estado
+        var estadoActual = null;
+
+        // 2. Función que activa el estado al hacer clic en los botones
+        function seleccionarEstado(tipo) {
+            estadoActual = tipo;
+            var indicador = document.getElementById('indicador-estado');
+            
+            if (tipo === 'pendiente') {
+                indicador.innerHTML = 'Estado seleccionado: <span style="color: #ff9800; font-weight: bold;">Pendiente ⚠️ (Haz clic en el mapa)</span>';
+            } else {
+                indicador.innerHTML = 'Estado seleccionado: <span style="color: #4CAF50; font-weight: bold;">Resuelto ✅ (Haz clic en el mapa)</span>';
+            }
+        }
+
+        // 3. Al hacer clic en el mapa, dibuja el marcador de inmediato sin bloqueos
+        map.on('click', function(e) {
+            if (!estadoActual) {
+                alert('¡Primero haz clic en el botón de "Pendiente" o "Resuelto"!');
+                return;
+            }
+
+            var textoEstado = (estadoActual === 'pendiente') ? 'Estado: Pendiente ⚠️' : 'Estado: Resuelto ✅';
+
+            // Coloca el marcador directamente en las coordenadas del clic (e.latlng)
+            L.marker(e.latlng).addTo(map)
+                .bindPopup('<b>' + textoEstado + '</b><br>Ubicación marcada en Cali.')
+                .openPopup();
+        });
+
+        // Asegurar que cargue bien el tamaño
+        setTimeout(function() {
+            map.invalidateSize();
+        }, 300);
+    </script>
 
 </body>
 </html>

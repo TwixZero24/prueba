@@ -277,6 +277,37 @@ nav a:hover {
     }
 }
 
+@media (max-width: 520px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 6px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+nav a:hover {
+    background-color: #D946EF;
+}
+
+@keyframes coloresNav {
+    0% {
+        background-color: hsla(258, 100%, 64%, 1);
+    }
+
+    50% {
+        background-color: hsla(202, 95%, 54%, 1);
+    }
+
+    100% {
+        background-color: hsla(218, 81%, 92%, 1);
+    }
+}
+
 h1{
     text-align: center;
     color: white;
@@ -288,4 +319,11 @@ h2{
     color: white;
     font-size: 2rem;
     margin-top: 2rem;
+}
+p1{
+    text-align: center;
+    color: black;
+
+
+
 }
